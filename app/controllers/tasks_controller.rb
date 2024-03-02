@@ -3,7 +3,6 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[show edit update destroy update_task_status]
 
   def index
-    byebug
     @tasks = Task.all
     authorize @tasks
   end
